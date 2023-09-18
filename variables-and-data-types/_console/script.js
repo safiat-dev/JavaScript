@@ -87,7 +87,7 @@ console.log(a);*/
 
 /* DATA TYPES */
 
-// String
+/*// String
 const firstName = 'Sara';
 console.log(firstName, typeof firstName);
 // Number
@@ -139,5 +139,56 @@ console.log(output, typeof output);
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null
 
 //  More info on the "function object" type
-// https://262.ecma-international.org/5.1/#sec-11.4.3
+// https://262.ecma-international.org/5.1/#sec-11.4.3 */
+
+/* PRIMITIVE AND REFERENCE TYPE */
+
+// Primitive values are stored on the stack
+const name = 'Safiat';
+const age = 30;
+
+// Reference values are stored on the heap
+const person = {
+    name:'Junaid',
+    age: '30',
+
+};
+
+let newName = name;
+newName = 'Qasim';
+
+let newPerson = person;
+newPerson.name = 'Safiat';
+
+console.log(name, newName);
+console.log(person, newPerson);
+
+/* TYPE CONVERSION */
+
+let amount = 'hello';
+
+// covert string to number
+// amount = parseInt(amount); 
+// amount = +amount;
+// amount = Number(amount);
+
+// convert number to string
+// amount = amount.toString();
+// amount = String(amount);
+
+// convert string to decimal
+ //amount = parseFloat(amount);
+
+// convert number to boolean
+//amount = Boolean(amount);
+
+// NaN
+amount = parseInt(amount);
+console.log(Math.sqrt(-1));
+console.log(1 + NaN);
+console.log(undefined + undefined);
+console.log('foo' / 3);
+
+console.log(amount, typeof amount);
+
 
