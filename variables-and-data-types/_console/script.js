@@ -191,4 +191,82 @@ console.log('foo' / 3);
 
 console.log(amount, typeof amount);
 
+/* OPERATORS */
+
+//  1 - ARITHEMATIC OPERATORS
+
+let x;
+
+x = 5 + 5;
+x = 5-5;
+x = 5*5;
+x = 5/5;
+
+console.log(x);
+
+// CONCATENATION OPERATOR // it is the plus sign : one is addition and other one is add strings together
+
+x = 'Hello ' + ' World';
+
+console.log(x);
+
+// EXPONENT OPERATOR // DOUBLE ASTERICK **
+
+x = 4 ** 3;
+
+console.log(x);
+
+// INCREMENT OPERATOR
+
+x = 2;
+x = x + 1;
+x++;
+
+console.log(x);
+
+// DECREMENT OPERATORS
+
+x = x - 1;
+x--;
+
+console.log(x);
+
+// 2 - ASSIGNMENT OPERATORS
+
+x = 10;
+
+x += 5;
+x -= 5;
+
+console.log(x);
+
+// 3 - COMPARISON OPERATORS // true false
+
+x = 2 == '2'; // only evaluates the value
+x = 2 === '2' // evaluates the typeof and value both
+x = 2 != '2' // not equal
+x = 2 !== '2' // evaluates the both typeof and value
+x = 10 > 5;
+
+console.log(x);
+
+/* TYPE COERSION */
+
+x = 5 + '5';
+x = 5 + Number('5');
+x = 5 * '5';
+x = 5 + null;
+x = Number(null);
+x = Number(true);
+x = Number(false);
+x = 5 + true;
+x = 5 + false;
+x = 5 + undefined;
+
+console.log(x, typeof x);
+
+
+
+
+
 
