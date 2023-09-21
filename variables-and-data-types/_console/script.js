@@ -143,7 +143,7 @@ console.log(output, typeof output);
 
 /* PRIMITIVE AND REFERENCE TYPE */
 
-// Primitive values are stored on the stack
+/*// Primitive values are stored on the stack
 const name = 'Safiat';
 const age = 30;
 
@@ -161,7 +161,7 @@ let newPerson = person;
 newPerson.name = 'Safiat';
 
 console.log(name, newName);
-console.log(person, newPerson);
+console.log(person, newPerson); */
 
 /* TYPE CONVERSION */
 
@@ -193,7 +193,7 @@ console.log(amount, typeof amount);
 
 /* OPERATORS */
 
-//  1 - ARITHEMATIC OPERATORS
+/*//  1 - ARITHEMATIC OPERATORS
 
 let x;
 
@@ -248,11 +248,11 @@ x = 2 != '2' // not equal
 x = 2 !== '2' // evaluates the both typeof and value
 x = 10 > 5;
 
-console.log(x);
+console.log(x); */
 
 /* TYPE COERSION */
 
-x = 5 + '5';
+/*x = 5 + '5';
 x = 5 + Number('5');
 x = 5 * '5';
 x = 5 + null;
@@ -263,7 +263,117 @@ x = 5 + true;
 x = 5 + false;
 x = 5 + undefined;
 
-console.log(x, typeof x);
+console.log(x, typeof x); */
+
+/* STRINGS */
+
+/*let x;
+
+const name = 'Safiat';
+const age = 30;
+
+x = 'Hello my name is ' + name + ' and I am ' + age + ' years old';
+
+console.log(x);
+
+// TEMPLATE LITERALS 
+
+x = `Hello my name is ${name} and I am ${age} years old`;
+
+console.log(x);
+
+// STRINGS PROPERTIES(attributes) AND METHODS(functions)
+const s = new String('Hello World');
+
+x = typeof s;
+x = s.length;
+
+console.log(s);
+
+// ACCESS VALUE BY KEY
+
+x = s[2];
+x = s.__proto__;
+x = s.toUpperCase();
+x = s.toLowerCase();
+// charAt() - returns the character at the specified index
+x = s.charAt(0);
+
+// indexOf - returns the index of the first occurrence of a specified value in a string
+x = s.indexOf('d');
+
+// substring() - search a string for a specified value
+x = s.substring(2, 5);
+x = s.substring(7);
+
+// slice() - extracts a part of a string and returns a new string
+x = s.slice(-11, -6);
+
+// trim() - remove whitespace from beginning and end of string
+x = '         Hello World';
+x = x.trim();
+
+// replace() - replace all instances of a string
+x = s.replace('World', 'John');
+
+// includes() - returns true if the string is found
+x = s.includes('Hell');
+
+// valueOf() - returns the primitive value of a variable
+x = s.valueOf();
+
+// split() - returns an array of strings
+x = s.split('');
+console.log(x);*/
+
+
+// CHALLENGE //
+
+const myString = 'developer';
+
+myNewString = myString.charAt(0).toUpperCase() + myString.substring(1);
+
+console.log(myNewString);
+
+/* NUMBERS */
+
+let x;
+
+const num = new Number(5);
+
+// toString() - returns a string representation of the number
+x = num.toString();
+console.log(x);
+// To get the length
+x = num.toString().length;
+console.log(x);
+
+// toFixed() - returns a string representation of the number with a specified number of decimals
+x = num.toFixed(2);
+console.log(x);
+
+// toPrecision() - returns a number with the specified length
+x = num.toPrecision(3);
+console.log(x);
+
+// toExponential() -  convert a number to exponential notation and return its value as a string
+x = num.toExponential(2);
+console.log(x);
+
+// toLocaleString() - returns a string representation of the number, using the current locale
+x = num.toLocaleString('en-US');
+console.log(x);
+
+// valueOf - Get value
+x = num.valueOf();
+console.log(x);
+// The Number object itself has some properties and methods
+
+// Largest and smallest possible number
+x = Number.MAX_VALUE;
+x = Number.MIN_VALUE;
+console.log(x);
+
 
 
 
