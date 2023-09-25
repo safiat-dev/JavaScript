@@ -376,7 +376,7 @@ console.log(x); */
 
 /* MATH OBJECT */
 
-let x;
+/*let x;
 
 // Square root
 x = Math.sqrt(9);
@@ -415,10 +415,235 @@ console.log(x);
 
 // Get a random number between 1 and 100
 x = Math.floor(Math.random() * 100 + 1);
+console.log(x);*/
+
+// NUMBER CHALLENGE //
+
+/*x = 50
+y = 15
+
+const sumOutput = x + y;
+console.log(sumOutput);
+
+const differenceOutput = x - y;
+console.log(differenceOutput);
+
+const productOutput = x * y;
+console.log(productOutput);
+
+const quotientOutput = x / y;
+console.log(quotientOutput);
+
+const rmOutput = x % y;
+console.log(rmOutput);*/
+
+// DATE AND TIME //
+
+/*let d;
+
+// Get today's date and time
+d = new Date();
+console.log(d);
+
+// Set to a string
+d = d.toString();
+console.log(d);
+// Get a specific date
+// Important: the month is 0-based, so 0 is January and 11 is December
+d = new Date(2021, 0, 10, 12, 30, 0);
+console.log(d);
+
+// Pass in a string
+d = new Date('2021-07-10T12:30:00');
+d = new Date('07/10/2021 12:30:00');
+d = new Date('2022-07-10');
+d = new Date('07-10-2022');
+console.log(d);
+// https://stackoverflow.com/questions/7556591/is-the-javascript-date-object-always-one-day-off
+
+// Get current timestamp
+d = Date.now();
+console.log(d);
+
+// Get the timestamp of a specific date
+d = new Date();
+console.log(d);
+
+d = d.getTime();
+console.log(d);
+
+d = d.valueOf();
+console.log(d);
+
+// Create a date from a timestamp
+d = new Date(1666962049745);
+console.log(d);
+
+// Convert from milliseconds to seconds
+d = Math.floor(Date.now() / 1000);
+console.log(d);*/
+
+// DATE OBEJECT METHODS //
+/*let x;
+let d = new Date();
+
+
+x = d.toString();
 console.log(x);
 
+x = d.getTime();
+console.log(x);
 
+x = d.valueOf();
+console.log(x);
 
+x = d.getFullYear();
+console.log(x);
+
+x = d.getMonth();
+console.log(x);
+
+x = d.getMonth() + 1;
+console.log(x);
+
+x = d.getDate();
+console.log(x);
+
+x = d.getDay();
+console.log(x);
+
+x = d.getHours();
+console.log(x);
+
+x = d.getMinutes();
+console.log(x);
+
+x = d.getSeconds();
+console.log(x);
+
+x = d.getMilliseconds();
+console.log(x);
+
+x = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+console.log(x);
+
+// Intl.DateTimeFormat API (locale specific)
+x = Intl.DateTimeFormat('en-US').format(d);
+console.log(x);
+
+x = Intl.DateTimeFormat('en-GB').format(d);
+console.log(x);
+
+x = Intl.DateTimeFormat('default').format(d);
+console.log(x);
+
+x = Intl.DateTimeFormat('default', { month: 'long' }).format(d);
+console.log(x);
+
+x = d.toLocaleString('default', { month: 'short' });
+console.log(x);
+
+x = d.toLocaleString('default', {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+  timeZone: 'America/New_York',
+});
+
+console.log(x);*/
+
+// ARRAY BASICS //
+/*let x;
+
+// Array Literal
+const numbers = [12, 45, 33, 29, 39, 102];
+const mixed = [12, 'Hello', true, null];
+
+// Array Constructor
+const fruits = new Array('apple', 'grape', 'orange');
+
+// Get value by index
+x = numbers[0];
+console.log(x);
+
+x = numbers[0] + numbers[3];
+console.log(x);
+
+x = `My favorite fruit is an ${fruits[2]}`;
+console.log(x);
+
+x = numbers.length;
+console.log(x);
+
+fruits[2] = 'pear';
+
+// length is not read-only
+// fruits.length = 2;
+
+fruits[3] = 'strawberry';
+
+// Using the length as the index will always add on the the end
+fruits[fruits.length] = 'blueberry';
+fruits[fruits.length] = 'peach';
+
+x = fruits;
+
+console.log(x);*/
+
+// ARRAY METHODS //
+let x;
+
+const arr = [28, 38, 44, 29, 109];
+
+// push() - Push a value on to the end of the array
+arr.push(100);
+
+// pop() - Take the last value off
+arr.pop();
+
+// unshift() - Add a value to the beginning of the array
+arr.unshift(99);
+
+// shift() - Remove first value
+arr.shift();
+
+// reverse() - Reverse an array
+arr.reverse();
+
+// includes() - Check to see if something is in the array
+x = arr.includes(445);
+console.log(x);
+
+// indexOf() - Return the index of the first match
+x = arr.indexOf(28);
+console.log(x);
+
+// Return array as a string
+x = arr.toString();
+console.log(x);
+
+x = arr.join();
+console.log(x);
+
+// slice() returns selected elements in an array, as a new array. Slice takes in the index of the first element and the index of the last element to be included in the new array.
+x = arr.slice(1, 4);
+console.log(x);
+
+// splice() works like slice() except it takes the index of the first element and the number of elements after that as a second argument. it also mutates the original array where slice() does not
+x = arr.splice(1, 4);
+console.log(x);
+
+// Remove a single element/value - The following will mutate the original array by taking out the element with the index of 4. x will be equal to a new array with that plucked out value.
+x = arr.splice(4, 1);
+console.log(x);
+
+// Chaining methods - Some methods can be chained depending on the return value.
+x = arr.slice(1, 4).reverse().toString().charAt(0);
+console.log(x);
 
 
 
