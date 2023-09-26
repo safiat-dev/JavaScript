@@ -561,10 +561,14 @@ console.log(x);*/
 
 // Array Literal
 const numbers = [12, 45, 33, 29, 39, 102];
+console.log(numbers);
+
 const mixed = [12, 'Hello', true, null];
+console.log(mixed);
 
 // Array Constructor
-const fruits = new Array('apple', 'grape', 'orange');
+const fruits = new Array('apple', 'banana', 'orange');
+console.log(fruits);
 
 // Get value by index
 x = numbers[0];
@@ -573,7 +577,7 @@ console.log(x);
 x = numbers[0] + numbers[3];
 console.log(x);
 
-x = `My favorite fruit is an ${fruits[2]}`;
+x = `My favorite fruit is ${fruits[1]}`;
 console.log(x);
 
 x = numbers.length;
@@ -595,54 +599,120 @@ x = fruits;
 console.log(x);*/
 
 // ARRAY METHODS //
-let x;
+/*let x;
 
 const arr = [28, 38, 44, 29, 109];
+console.log(arr);
 
 // push() - Push a value on to the end of the array
 arr.push(100);
+console.log(arr);
 
 // pop() - Take the last value off
 arr.pop();
+console.log(arr);
 
 // unshift() - Add a value to the beginning of the array
 arr.unshift(99);
+console.log(arr);
 
 // shift() - Remove first value
 arr.shift();
+console.log(arr);
 
 // reverse() - Reverse an array
 arr.reverse();
+console.log(arr);
 
-// includes() - Check to see if something is in the array
+// includes() - Check to see if something is in the array - true/false based
 x = arr.includes(445);
-console.log(x);
+console.log(x, arr);
 
 // indexOf() - Return the index of the first match
 x = arr.indexOf(28);
-console.log(x);
+console.log(x, arr);
 
 // Return array as a string
 x = arr.toString();
-console.log(x);
+console.log(x, arr);
 
 x = arr.join();
-console.log(x);
+console.log(x, arr);
 
 // slice() returns selected elements in an array, as a new array. Slice takes in the index of the first element and the index of the last element to be included in the new array.
 x = arr.slice(1, 4);
-console.log(x);
+console.log(x, arr);
 
 // splice() works like slice() except it takes the index of the first element and the number of elements after that as a second argument. it also mutates the original array where slice() does not
 x = arr.splice(1, 4);
-console.log(x);
+console.log(x, arr);
 
 // Remove a single element/value - The following will mutate the original array by taking out the element with the index of 4. x will be equal to a new array with that plucked out value.
 x = arr.splice(4, 1);
-console.log(x);
+console.log(x, arr);
 
 // Chaining methods - Some methods can be chained depending on the return value.
 x = arr.slice(1, 4).reverse().toString().charAt(0);
+console.log(x, arr);*/
+
+// ARRAY NESTING, CONCAT AND SPREADING //
+
+let x;
+
+const fruits = ['apple', 'pear', 'orange'];
+console.log(fruits);
+
+const berries = ['strawberry', 'blueberry', 'rasberry'];
+console.log(berries);
+
+// Nesting arrays
+
+// Nesting berries inside of fruits
+fruits.push(berries);
+console.log(fruits);
+
+// Now we can access 'blueberry' with the following
+x = fruits[3][1];
+console.log(x);
+
+// Create a new variable and nest both arrays
+const allFruits = [fruits, berries];
+console.log(allFruits);
+
+x = allFruits[1][2];
+console.log(x);
+
+// concat() - Concatenate arrays
+x = fruits.concat(berries);
+console.log(x);
+
+// spread operator (...) - Concatenate with
+x = [...fruits, ...berries];
+console.log(x);
+
+// flat() - Flatten an array
+const arr = [1, 2, [3, 4, 5], 6, [7, 8]];
+console.log(arr);
+
+x = arr.flat();
+console.log(x, arr);
+
+// Static methods of Array object
+
+// isArray() - Check is is an array
+x = Array.isArray(fruits);
+console.log(x);
+
+// from() - Create an array from an array like value
+x = Array.from('12345');
+console.log(x);
+
+// of() - Create an array from a set of values
+const a = 1;
+const b = 2;
+const c = 3;
+
+x = Array.of(a, b, c);
 console.log(x);
 
 
