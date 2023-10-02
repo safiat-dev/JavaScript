@@ -657,7 +657,7 @@ console.log(x, arr);*/
 
 // ARRAY NESTING, CONCAT AND SPREADING //
 
-let x;
+/*let x;
 
 const fruits = ['apple', 'pear', 'orange'];
 console.log(fruits);
@@ -699,7 +699,7 @@ console.log(x, arr);
 
 // Static methods of Array object
 
-// isArray() - Check is is an array
+// isArray() - Check is it an array
 x = Array.isArray(fruits);
 console.log(x);
 
@@ -713,7 +713,200 @@ const b = 2;
 const c = 3;
 
 x = Array.of(a, b, c);
+console.log(x);*/
+
+// ARRAY CHALLENGE //
+ // challenge 1
+const arr = [1, 2, 3, 4, 5];
+
+arr.reverse();
+console.log(arr);
+
+arr.push(0);
+console.log(arr);
+
+arr.unshift(6);
+console.log(arr);
+
+// challenge 2
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [5, 6, 7, 8, 9, 10];
+
+const arr3 = arr1.slice(0, 4).concat(arr2);
+console.log(arr3);
+
+// OBJECT LITERALS //
+
+/*let x;
+
+// Creating an object
+const person = {
+  name: 'John Doe',
+  age: 30,
+  isAdmin: true,
+  address: {
+    street: '123 Main st',
+    city: 'Boston',
+    state: 'MA',
+  },
+  hobbies: ['music', 'sports'],
+};
+console.log(person);
+
+// Accessing object properties
+x = person.name; // Dot notation
 console.log(x);
+
+x = person['age']; // Bracket notation
+console.log(x);
+
+x = person.address.state;
+console.log(x);
+
+x = person.hobbies[0];
+console.log(x);
+
+// Updating properties
+person.name = 'Jane Doe';
+person['isAdmin'] = false;
+
+// Deleting properties
+delete person.age;
+
+// Create new properties
+person.hasChildren = true;
+
+// Add functions
+person.greet = function () {
+  console.log(`Hello, my name is ${this.name}`);
+};
+
+person.greet();
+
+// Keys with multiple words
+const person2 = {
+  'first name': 'Brad',
+  'last name': 'Traversy',
+};
+
+x = person2['first name'];
+
+console.log(x);*/
+
+// OBJECT SPREAD METHODS // 
+
+/*let x;
+
+// Create object using the object constructor
+const todo = new Object();
+
+todo.id = 1;
+todo.name = 'Buy Milk';
+todo.completed = false;
+
+x = todo;
+
+console.log(x);
+
+// Object Nesting
+const person = {
+  address: {
+    coords: {
+      lat: 42.9384,
+      lng: -71.3232,
+    },
+  },
+};
+
+x = person.address.coords.lat;
+
+console.log(x);
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+
+// Spread operator
+const obj3 = { ...obj1, ...obj2 };
+console.log(obj3);
+
+// Same as using ...
+const obj4 = Object.assign({}, obj1, obj2);
+console.log(obj4);
+
+// Array of objects
+const todos = [
+  { id: 1, name: 'Buy Milk' },
+  { id: 2, name: 'Pickup kids from school' },
+  { id: 3, name: 'Take out trash' },
+];
+
+x = todos;
+console.log(x);
+
+x = todos[0].name;
+console.log(x);
+
+// Get array of object keys
+x = Object.keys(todo);
+console.log(x);
+
+// Get length of an object
+x = Object.keys(todo).length;
+console.log(x);
+
+// Get array of object values
+x = Object.values(todo);
+console.log(x);
+
+// Get array of object key/value pairs
+x = Object.entries(todo);
+console.log(x);
+
+// Check if object has a property
+x = todo.hasOwnProperty('age');
+console.log(x);*/
+
+// DESTRUCTURING NAMING //
+
+const firstName = 'Safiat';
+const lastName = 'Junaid';
+const age = 30;
+
+const person = {
+    firstName,
+    lastName,
+    age,
+};
+console.log(person.age);
+
+// Destructuring object properties
+
+const todo = {
+    id: 1,
+    title: 'Take out trash',
+    user: {
+      name: 'John',
+    },
+  };
+  
+  const {
+    id: todoId, // rename id to todoId
+    title,
+    user: { name }, // destructuring multiple levels
+  } = todo;
+  
+  console.log(todoId);
+  
+  // Destructuring arrays & using the rest/spread operator
+  const numbers = [23, 67, 33, 49, 52];
+  
+  const [first, second, ...rest] = numbers;
+  
+  console.log(first, second, rest);
+
+
+
 
 
 
