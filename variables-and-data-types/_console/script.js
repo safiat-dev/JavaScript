@@ -905,6 +905,38 @@ const todo = {
   
   console.log(first, second, rest);
 
+  // OBJECT cHALLENGE //
+  const library = [
+    {
+      title: 'Peer e Kamil',
+      author: 'Umera Ahmed',
+      status: {
+        own: true,
+        reading: false,
+        read: false,    
+      }
+    },
+    {
+      title: 'Jannat k Pattay',
+      author: 'Nimrah Ahmed',
+      status: {
+        own: true,
+        reading: false,
+        read: false,    
+      }
+    },
+    {
+      title: 'Mushaf',
+      author: 'Nimrah Ahmed',
+      status: {
+        own: true,
+        reading: false,
+        read: false,    
+      }
+    },
+  ]
+  console.log(library);
+
 
 
 
