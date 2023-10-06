@@ -1202,6 +1202,72 @@ console.log(subtract(10, 5));
 console.log(double(10));
 console.log(createObj());
 
+// FUNCTION CHALLENGE 1 //
+
+function getCelcius(f) {
+  const celsius = ((f - 32) * 5) / 9;
+  return celsius;
+}
+console.log(getCelcius(32));
+
+// EXECUTION CONTEXT //
+
+//  Go to 'sources' tab and add a breakpoint at the first line and step through to see the execution phase in action
+const x = 100;
+const y = 50;
+
+function getSum(n1, n2) {
+  const sum = n1 + n2;
+  return sum;
+}
+
+const sum1 = getSum(x, y);
+const sum2 = getSum(10, 5);
+
+console.log(sum1, sum2);
+
+// CALL STACK //
+
+// Open 'sources' tab and put a breakpoint at the first() function
+
+// First Example
+
+function first() {
+  console.log('first...');
+}
+first();
+
+function second() {
+  console.log('second...');
+}
+second();
+
+function third() {
+  console.log('third...');
+}
+third();
+
+
+
+// Second Example
+
+function first() {
+console.log('first...');
+first();
+}
+
+function second() {
+console.log('second...');
+second();
+}
+
+function third() {
+console.log('third...');
+third();
+ }
+
+
+
 
 
 
