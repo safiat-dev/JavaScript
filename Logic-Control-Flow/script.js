@@ -9,7 +9,7 @@ if (true) {
   }
   
   // Evaluation expressions
-  const x = 10;
+  /*const x = 10;
   const y = 5;
   
   if (x >= y) {
@@ -34,7 +34,7 @@ if (true) {
   if (x >= y)
     console.log(`${x} is greater than or equal to ${y}`),
       console.log('This is true');
-  else console.log('This is false');
+  else console.log('This is false');*/
 
   // ELSE IF AND NESTING //
  /* const d = new Date(10, 30, 2022, 6, 0, 0);
@@ -78,7 +78,7 @@ if (hour === 6 || hour === 20) {
 const d = new Date(2022, 1, 10, 19, 0, 0);
 const month = d.getMonth();
 const hour = d.getHours();
-
+ 
 
 // Immediate value evaluation
 switch (month) {
@@ -106,3 +106,177 @@ switch (true) {
   default:
     console.log('Good Night');
 }
+
+// CALCULATOR CHALLENGE //
+
+function calculator(num1, num2, operator) {
+    let result;
+
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            result = num1 / num2;
+            break;
+        default:
+            result = 'Invalid Operator';
+    }
+console.log(result);
+return result;
+}
+
+
+calculator(5, 3, '-');
+
+// TRUTHY AND FALSY VALUES //
+// Falsy Values:
+// - false
+// - 0
+// - "" or '' (Empty string)
+// - null
+// - undefined
+// - NaN
+
+// Truthy Values:
+// - Everything else that is not falsy
+// - true
+// - '0' (0 in a string)
+// - ' ' (space in a string)
+// - 'false' (false in a string)
+// - [] (empty array)
+// - {} (empty object)
+// - function () {} (empty function)
+
+const x = function () {};
+
+if (x) {
+  console.log('This is truthy');
+} else {
+  console.log('This is falsy');
+}
+
+console.log(Boolean(x));
+
+// TRUTHY AND FALSY CAVEATS //
+/*const children = 3;
+
+// Checking for literal 0
+if (children) {
+  console.log(`You have ${children} children`);
+} else {
+  console.log('Please enter number of children');
+}
+
+// Solution
+if (!isNaN(children)) {
+  console.log(`You have ${children} children`);
+} else {
+  console.log('Please enter number of children');
+}
+
+// Checking for empty arrays
+const posts = ['Post One'];
+
+// Always true even when empty
+if (posts) {
+  console.log('List Posts');
+} else {
+  console.log('No Posts To List');
+}
+
+// Solution
+if (posts.length > 0) {
+  console.log('List Posts');
+} else {
+  console.log('No Posts To List');
+}
+
+// Checking for empty objects
+const user = {
+  name: 'Brad',
+};
+
+// Always true, even when no properties
+if (user) {
+  console.log('List User');
+} else {
+  console.log('No User');
+}
+
+// Solution
+if (Object.keys(user).length > 0) {
+  console.log('List User');
+} else {
+  console.log('No User');
+}
+
+// Loose Equality (==)
+console.log(false == 0); // true
+console.log('' == 0); // true
+console.log(null == undefined); // true
+
+// Strict Equality
+console.log(false === 0); // false
+console.log('' === 0); // false
+console.log(null === undefined); // false*/
+
+// LOGICAL OPERATORS //
+console.log(10 < 20 && 30 > 15 && 40 > 30); // Must all be true
+console.log(10 > 20 || 30 < 15); // Only one has to be true
+
+// && - Will return first falsy value or the last value
+let a;
+
+a = 10 && 20;
+console.log(a);
+
+a = 10 && 20 && 30;
+console.log(a);
+
+a = 10 && 0 && 30;
+console.log(a);
+
+a = 10 && '' && 0 && 30;
+console.log(a);
+
+const posts = ['Post One', 'Post Two'];
+posts.length > 0 && console.log(posts[0]);
+
+// || - Will return the first truthy value or the last value
+
+let b;
+
+b = 10 || 20;
+console.log(b);
+
+b = 0 || 20;
+console.log(b);
+
+b = 0 || null || '' || undefined;
+console.log(b);
+
+// ?? - Returns the right side operand when the left is null or undefined
+
+let c;
+
+c = 10 ?? 20;
+console.log(c);
+
+c = null ?? 20;
+console.log(c);
+
+c = undefined ?? 30;
+console.log(c);
+
+c = 0 ?? 30;
+console.log(c);
+
+c = '' ?? 30;
+console.log(c);
