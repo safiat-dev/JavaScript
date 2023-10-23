@@ -372,3 +372,5 @@ console.log(redirect);
 auth ? console.log('Welcome to the dashboard') : null;
 // Shorthand for ternary with no else
 auth && console.log('Welcome to the dashboard');
+
+//
