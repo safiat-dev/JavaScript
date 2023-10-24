@@ -24,7 +24,7 @@
 // }
 
 // Loop through an array
-const names = ['Brad', 'Sam', 'Sara', 'John', 'Tim'];
+/*const names = ['Brad', 'Sam', 'Sara', 'John', 'Tim'];
 
 for (let i = 0; i < names.length; i++) {
   if (names[i] === 'John') {
@@ -51,3 +51,133 @@ for (let i = 0; i <= 20; i++) {
     }
     console.log(i);
   }
+
+  // WHILE - DO - WHILE //
+
+  let i = 0;
+
+while (i <= 20) {
+  console.log('Number ' + i);
+  i++;
+}
+
+// Loop over arrays
+const arr = [10, 20, 30, 40, 50];
+
+while (i < arr.length) {
+  console.log(arr[i]);
+  i++;
+}
+
+// Nesting while loops
+while (i <= 5) {
+  console.log('Number ' + i);
+
+  let j = 1;
+  while (j <= 5) {
+    console.log(`${i} * ${j} = ${i * j}`);
+    j++;
+  }
+
+  i++;
+}
+
+// Do While Loop - Always runs once
+do {
+  console.log('Number ' + i);
+  i++;
+} while (i <= 20);*/
+
+// FIZZBUZZ CHALLENGE //
+
+/*Print/log the numbers from 1 to 100
+For multiples of three print "Fizz" instead of the number
+For multiples of five print "Buzz"
+For numbers which are multiples of both three and five print "FizzBuzz".
+Hints:
+
+If you have taken the course up to this point, then you know how to write a loop and output/log something for each iteration. 
+You also know how to check for a condition with "if/else/else if". You also know how to get a remainder of a number using 
+the modulus operator (%). This is all you need to know to complete this challenge.*/
+
+// SOLUTION
+
+// For Loop
+for (let i = 1; i <= 100; i++) {
+if (i % 15 === 0) {
+     console.log('FizzBuzz');
+   } else if (i % 3 === 0) {
+     console.log('Fizz');
+   } else if (i % 5 === 0) {
+     console.log('Buzz');
+   } else {
+     console.log(i);
+   }
+ }
+
+// While Loop
+let j = 1;
+
+while (j <= 100) {
+  if (j % 15 === 0) {
+    console.log('FizzBuzz');
+  } else if (j % 3 === 0) {
+    console.log('Fizz');
+  } else if (j % 5 === 0) {
+    console.log('Buzz');
+  } else {
+    console.log(j);
+  }
+
+  j++;
+}
+
+// FOR OF LOOP //
+// Loop through arrays
+const items = ['book', 'table', 'chair', 'kite'];
+const users = [{ name: 'Safiat' }, { name: 'Qasim' }, { name: 'Junaid' }];
+
+ for (const item of items) {
+   console.log(item);
+ }
+
+for (const user of users) {
+  console.log(user.name);
+}
+
+// Loop over strings
+const str = 'Hello World';
+
+for (const letter of str) {
+  console.log(letter);
+}
+
+// Loop over Maps
+const map = new Map();
+map.set('name', 'Safiat');
+map.set('age', 29);
+
+for (const [key, value] of map) {
+  console.log(key, value);
+}
+
+// FOR IN LOOP //
+// Loop through objects
+const colorObj = {
+    color1: 'red',
+    color2: 'blue',
+    color3: 'orange',
+    color4: 'green',
+  };
+  
+  for (const key in colorObj) {
+    console.log(key, colorObj[key]);
+  }
+  
+  // Loop through arrays
+  const colorArr = ['red', 'green', 'blue', 'yellow'];
+  
+  for (const key in colorArr) {
+    console.log(colorArr[key]);
+  }
+  
