@@ -180,4 +180,156 @@ const colorObj = {
   for (const key in colorArr) {
     console.log(colorArr[key]);
   }
-  
+
+  // ARRAY.FOREACH //
+  const socials = ['Twitter', 'LinkedIn', 'Facebook', 'Instagram'];
+
+// View prototype chain
+console.log(socials.__proto__);
+
+// Long form
+socials.forEach(function (item) {
+  console.log(item);
+});
+
+// Short form
+socials.forEach((item) => console.log(item));
+
+// We can also pass in the index and original array
+socials.forEach((item, index, arr) => console.log(`${index} - ${item}`, arr));
+
+// Using a named function
+function logSocials(social) {
+  console.log(social);
+}
+
+socials.forEach(logSocials);
+
+// Array of objects
+const socialObjs = [
+  { name: 'Twitter', url: 'https://twitter.com' },
+  { name: 'Facebook', url: 'https://facebook.com' },
+  { name: 'Linkedin', url: 'https://linkedin.com' },
+  { name: 'Instagram', url: 'https://instagram.com' },
+];
+
+socialObjs.forEach((item) => console.log(item));
+
+// ARRAY.FILTER //
+/*const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+const evenNumbers = numbers.filter(function (number) {
+  return number % 2 === 0;
+});
+
+// Short version
+const evenNumbers2 = numbers.filter((number) => number % 2 === 0);
+
+// Same with forEach
+const evenNumbers3 = [];
+numbers.forEach((number) => {
+  if (number % 2 === 0) {
+    evenNumbers.push(number);
+  }
+});
+
+const companies = [
+  { name: 'Company One', category: 'Finance', start: 1981, end: 2004 },
+  { name: 'Company Two', category: 'Retail', start: 1992, end: 2008 },
+  { name: 'Company Three', category: 'Auto', start: 1999, end: 2007 },
+  { name: 'Company Four', category: 'Retail', start: 1989, end: 2010 },
+  { name: 'Company Five', category: 'Technology', start: 2009, end: 2014 },
+  { name: 'Company Six', category: 'Finance', start: 1987, end: 2010 },
+  { name: 'Company Seven', category: 'Auto', start: 1986, end: 1996 },
+  { name: 'Company Eight', category: 'Technology', start: 2011, end: 2016 },
+  { name: 'Company Nine', category: 'Retail', start: 1981, end: 1989 },
+];
+
+// Get only retail companies
+const retailCompanies = companies.filter(
+  (company) => company.category === 'Retail'
+);
+// console.log(retailCompanies);
+
+// Get companies that started in or after 1980 and ended in or before 2005
+const earlyCompanies = companies.filter(
+  (company) => company.start >= 1980 && company.end <= 2005
+);
+// console.log(earlyCompanies);
+
+// Get companies that lasted 10 years or more
+const longCompanies = companies.filter(
+  (company) => company.end - company.start >= 10
+);
+
+console.log(longCompanies);*/
+
+// ARRAY.MAP //
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const doubledNumbers = numbers.map((number) => number * 2);
+console.log(doubledNumbers);
+
+// Same with forEach
+const doubledNumbers2 = [];
+numbers.forEach((number) => {
+  doubledNumbers2.push(number * 2);
+});
+
+const companies = [
+  { name: 'Company One', category: 'Finance', start: 1981, end: 2004 },
+  { name: 'Company Two', category: 'Retail', start: 1992, end: 2008 },
+  { name: 'Company Three', category: 'Auto', start: 1999, end: 2007 },
+  { name: 'Company Four', category: 'Retail', start: 1989, end: 2010 },
+  { name: 'Company Five', category: 'Technology', start: 2009, end: 2014 },
+  { name: 'Company Six', category: 'Finance', start: 1987, end: 2010 },
+  { name: 'Company Seven', category: 'Auto', start: 1986, end: 1996 },
+  { name: 'Company Eight', category: 'Technology', start: 2011, end: 2016 },
+  { name: 'Company Nine', category: 'Retail', start: 1981, end: 1989 },
+];
+
+// Create an array of company names
+const companyNames = companies.map((company) => company.name);
+// console.log(companyNames);
+
+// Create an array with just company and category
+const companyInfo = companies.map((company) => {
+  return {
+    name: company.name,
+    category: company.category,
+  };
+});
+
+// Create an array of objects with the name and the length of each company in years
+const companyYears = companies.map((company) => {
+  return {
+    name: company.name,
+    length: company.end - company.start + ' years',
+  };
+});
+
+console.log(companyYears);
+
+// Chain map methods
+const squareAndDouble = numbers
+  .map((number) => Math.sqrt(number))
+  .map((sqrt) => sqrt * 2);
+
+const squareAndDouble2 = numbers
+  .map(function (number) {
+    return Math.sqrt(number);
+  })
+  .map(function (sqrt) {
+    return sqrt * 2;
+  })
+  .map(function (sqrtDoubled) {
+    return sqrtDoubled * 3;
+  });
+
+// Chaining different methods
+const evenDouble = numbers
+  .filter((number) => number % 2 === 0)
+  .map((number) => number * 2);
+
+console.log(evenDouble);
