@@ -103,7 +103,7 @@ the modulus operator (%). This is all you need to know to complete this challeng
 // SOLUTION
 
 // For Loop
-for (let i = 1; i <= 100; i++) {
+/*for (let i = 1; i <= 100; i++) {
 if (i % 15 === 0) {
      console.log('FizzBuzz');
    } else if (i % 3 === 0) {
@@ -130,11 +130,11 @@ while (j <= 100) {
   }
 
   j++;
-}
+} */
 
 // FOR OF LOOP //
 // Loop through arrays
-const items = ['book', 'table', 'chair', 'kite'];
+/*const items = ['book', 'table', 'chair', 'kite'];
 const users = [{ name: 'Safiat' }, { name: 'Qasim' }, { name: 'Junaid' }];
 
  for (const item of items) {
@@ -159,11 +159,11 @@ map.set('age', 29);
 
 for (const [key, value] of map) {
   console.log(key, value);
-}
+}*/
 
 // FOR IN LOOP //
 // Loop through objects
-const colorObj = {
+/*const colorObj = {
     color1: 'red',
     color2: 'blue',
     color3: 'orange',
@@ -179,10 +179,10 @@ const colorObj = {
   
   for (const key in colorArr) {
     console.log(colorArr[key]);
-  }
+  }*/
 
   // ARRAY.FOREACH //
-  const socials = ['Twitter', 'LinkedIn', 'Facebook', 'Instagram'];
+  /*const socials = ['Twitter', 'LinkedIn', 'Facebook', 'Instagram'];
 
 // View prototype chain
 console.log(socials.__proto__);
@@ -213,7 +213,7 @@ const socialObjs = [
   { name: 'Instagram', url: 'https://instagram.com' },
 ];
 
-socialObjs.forEach((item) => console.log(item));
+socialObjs.forEach((item) => console.log(item));*/
 
 // ARRAY.FILTER //
 /*const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -266,7 +266,7 @@ console.log(longCompanies);*/
 
 // ARRAY.MAP //
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+/* const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const doubledNumbers = numbers.map((number) => number * 2);
 console.log(doubledNumbers);
@@ -332,4 +332,39 @@ const evenDouble = numbers
   .filter((number) => number % 2 === 0)
   .map((number) => number * 2);
 
-console.log(evenDouble);
+console.log(evenDouble); */
+
+// ARRAY.REDUCE //
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Add all numbers together
+const sum = numbers.reduce(function (accumulator, currentValue) {
+  return accumulator + currentValue;
+}, 0);
+
+const sum2 = numbers.reduce((acc, cur) => acc + cur, 0);
+
+// Using a for loop
+const sum3 = () => {
+  let acc = 0;
+  for (const cur of numbers) {
+    acc += cur;
+  }
+  return acc;
+};
+
+// Shopping cart example (objects)
+const cart = [
+  { id: 1, name: 'Product 1', price: 130 },
+  { id: 2, name: 'Product 2', price: 150 },
+  { id: 3, name: 'Product 3', price: 200 },
+];
+
+/*const total = cart.reduce(function (acc, product) {
+ return acc + product.price;
+ }, 0);*/
+
+const total = cart.reduce((acc, product) => acc + product.price, 0);
+
+console.log(total);
